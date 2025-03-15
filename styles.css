@@ -1,163 +1,192 @@
-/* Global Styles */
+/* Hack mode */
 body {
-    font-family: "Helvetica", sans-serif; /* Common font used during the Alto era */
+    font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #FFFFFF; /* Classic white background for a clean, functional look */
-    color: #000000; /* Black text for high contrast */
-    line-height: 1.5;
+    background-color: #0f0f0f; /* Dark background for hacker theme */
+    color: #00ff00; /* Bright green text color */
+    line-height: 1.6;
 }
 
-/* Header (Title Bar) */
 header {
-    background-color: #D9D9D9; /* Soft gray background similar to early GUIs */
-    color: #000000; /* Black text */
+    background-color: #1a1a1a; /* Dark header background */
+    color: #00ff00; /* Green text in the header */
     text-align: center;
-    padding: 10px;
-    font-size: 18px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Strong shadow for tech feel */
 }
 
 header h1 {
     margin: 0;
-    font-weight: normal;
+    font-size: 28px;
+    font-weight: 600;
 }
 
 header p {
     margin: 5px 0 0;
-    font-size: 14px;
+    font-size: 16px;
     opacity: 0.8;
 }
 
-/* Main Content Area */
 main {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #F4F4F4; /* Light gray background for content */
-    border: 2px solid #D9D9D9; /* Border to mimic the window frame of the Alto's GUI */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow to give depth */
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
 }
 
-/* Basic Text Elements */
-h2, h3 {
-    font-size: 18px;
-    color: #000000;
-    margin: 10px 0;
+#filter-section {
+    background-color: #222; /* Dark background for filter section */
+    color: #00ff00; /* Green text color */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
 }
 
-p {
-    font-size: 14px;
-    color: #000000;
-    margin: 10px 0;
+#software-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-end;
 }
 
-/* Buttons (Early GUI Buttons) */
-button {
-    background-color: #D9D9D9; /* Soft gray button background */
-    color: #000000;
-    border: 2px solid #000000;
-    padding: 8px 16px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 3px;
-    transition: background-color 0.3s ease;
+.filter-group {
+    flex: 1 1 250px;
 }
 
-button:hover {
-    background-color: #B0B0B0; /* Slightly darker gray on hover */
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #00ff00; /* Green for labels */
 }
 
-/* Input Fields (Text Boxes) */
-input[type="text"], input[type="checkbox"], select {
-    background-color: #F4F4F4; /* Light gray input background */
-    color: #000000;
-    border: 2px solid #B0B0B0; /* Subtle border */
-    padding: 8px;
-    font-size: 14px;
+.filter-group select, .filter-group input[type="checkbox"] {
     width: 100%;
-    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #333; /* Dark border */
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: #333; /* Dark input background */
+    color: #00ff00; /* Green text in inputs */
 }
 
-/* Container for Software Grid */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-group label {
+    margin: 0;
+    color: #00ff00; /* Green checkbox label */
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+}
+
 #software-section {
-    background-color: #FFFFFF;
-    padding: 20px;
-    border: 2px solid #D9D9D9;
-    margin-top: 30px;
+    background-color: #222; /* Dark background for software section */
+    color: #00ff00; /* Green text color */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Grid of Software Cards (Clean Layout) */
+#software-section h2 {
+    margin: 0 0 20px;
+    font-size: 22px;
+    color: #00ff00; /* Green for titles */
+}
+
 #software-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
-    margin-top: 20px;
 }
 
 .software-card {
-    background-color: #FFFFFF;
-    padding: 15px;
-    border: 1px solid #D9D9D9;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    transition: box-shadow 0.3s ease;
+    border: 1px solid #444; /* Dark border for cards */
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #333; /* Dark background for cards */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .software-card:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle hover effect */
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.5); /* Green glow on hover */
 }
 
 .software-card img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
 }
 
 .software-card h3 {
-    margin: 10px 0;
-    font-size: 16px;
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #00ff00; /* Green for software card titles */
 }
+
+.software-card .license {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff; /* White text for contrast */
+}
+
+/* License-specific background colors */
+.software-card .license.mit { background-color: #00b300; } /* MIT - Bright Green */
+.software-card .license.gpl-2-0 { background-color: #007bff; } /* GPL-2.0 - Blue */
+.software-card .license.gpl-3-0 { background-color: #0056b3; } /* GPL-3.0 - Darker Blue */
+.software-card .license.apache-2-0 { background-color: #ff8c00; } /* Apache-2.0 - Orange */
+.software-card .license.lgpl-2-1 { background-color: #800080; } /* LGPL-2.1 - Purple */
+.software-card .license.epl-2-0 { background-color: #ff4500; } /* EPL-2.0 - Red-Orange */
+.software-card .license.postgresql { background-color: #336791; } /* PostgreSQL - Steel Blue */
+.software-card .license.sspl-1-0 { background-color: #d81b60; } /* SSPL-1.0 - Pinkish Red */
+.software-card .license.bsd-3-clause { background-color: #ffc107; } /* BSD-3-Clause - Yellow */
+.software-card .license.mpl-2-0 { background-color: #17a2b8; } /* MPL-2.0 - Cyan */
+.software-card .license.agpl-3-0 { background-color: #fd7e14; } /* AGPL-3.0 - Bright Orange */
+.software-card .license.public-domain { background-color: #6c757d; } /* Public Domain - Gray */
+.software-card .license.odbl { background-color: #28a745; } /* ODbL - Forest Green */
+
+/* Fallback for any unlisted licenses */
+.software-card .license.default { background-color: #808080; } /* Gray fallback */
 
 .software-card p {
-    font-size: 12px;
-    color: #000000;
-    margin-bottom: 10px;
+    margin: 5px 0;
+    font-size: 14px;
+    color: #ccc; /* Light grey text for paragraphs */
 }
 
-/* License Badge (Minimalist) */
-.software-card .license {
-    font-size: 10px;
-    font-weight: bold;
-    color: #FFFFFF;
-    padding: 4px 8px;
-    border-radius: 4px;
-    display: inline-block;
-    margin-top: 10px;
+.software-card .description {
+    margin-bottom: 15px;
+    line-height: 1.5;
 }
 
-/* License Colors */
-.software-card .license.mit { background-color: #4CAF50; } /* Green for MIT */
-.software-card .license.gpl-2-0 { background-color: #2196F3; } /* Blue for GPL 2.0 */
-.software-card .license.apache-2-0 { background-color: #FF5722; } /* Red for Apache */
-.software-card .license.default { background-color: #9E9E9E; } /* Gray for others */
-
-/* Links */
-a {
-    color: #0000EE; /* Classic blue link color */
+.software-card a {
+    color: #00ff00; /* Green links */
     text-decoration: none;
 }
 
-a:hover {
+.software-card a:hover {
     text-decoration: underline;
+    color: #ffcc00; /* Change color to yellow on hover */
 }
 
-/* Footer (Optional) */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #D9D9D9;
-    color: #000000;
-    font-size: 12px;
-    margin-top: 30px;
+.software-card .install {
+    background-color: #111; /* Dark background for install section */
+    padding: 8px;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 13px;
+    margin-top: 10px;
+    color: #00ff00; /* Green text for install code */
 }
