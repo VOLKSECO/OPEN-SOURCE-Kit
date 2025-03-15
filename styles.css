@@ -1,62 +1,163 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Helvetica", sans-serif; /* Common font used during the Alto era */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #FFFFFF; /* Classic white background for a clean, functional look */
+    color: #000000; /* Black text for high contrast */
+    line-height: 1.5;
 }
-.header {
-    background-color: #2c3e50;
-    color: white;
+
+/* Header (Title Bar) */
+header {
+    background-color: #D9D9D9; /* Soft gray background similar to early GUIs */
+    color: #000000; /* Black text */
     text-align: center;
-    padding: 20px;
-}
-.header h1 { margin: 0; font-size: 2em; }
-.header p { margin: 5px 0 0; font-size: 1.1em; }
-.selectors {
-    padding: 20px;
-    text-align: center;
-    background-color: #ecf0f1;
-}
-.selectors select {
     padding: 10px;
-    font-size: 1em;
-    margin: 0 10px;
-    border-radius: 5px;
-    width: 200px;
+    font-size: 18px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
-.software-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+
+header h1 {
+    margin: 0;
+    font-weight: normal;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Main Content Area */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
     padding: 20px;
+    background-color: #F4F4F4; /* Light gray background for content */
+    border: 2px solid #D9D9D9; /* Border to mimic the window frame of the Alto's GUI */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow to give depth */
 }
-.software-card {
-    background-color: white;
-    width: 300px;
-    margin: 15px;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
+
+/* Basic Text Elements */
+h2, h3 {
+    font-size: 18px;
+    color: #000000;
+    margin: 10px 0;
 }
-.software-card:hover { transform: scale(1.05); }
-.software-card img { width: 50px; height: 50px; margin-bottom: 10px; }
-.software-card h3 { margin: 10px 0; color: #2c3e50; }
-.software-card p { font-size: 0.9em; color: #7f8c8d; margin: 5px 0; }
-.software-card a { color: #3498db; text-decoration: none; }
-.software-card a:hover { text-decoration: underline; }
-.software-card .command {
-    background-color: #ecf0f1;
-    padding: 5px;
-    font-family: monospace;
-    font-size: 0.85em;
+
+p {
+    font-size: 14px;
+    color: #000000;
+    margin: 10px 0;
+}
+
+/* Buttons (Early GUI Buttons) */
+button {
+    background-color: #D9D9D9; /* Soft gray button background */
+    color: #000000;
+    border: 2px solid #000000;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
     border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #B0B0B0; /* Slightly darker gray on hover */
+}
+
+/* Input Fields (Text Boxes) */
+input[type="text"], input[type="checkbox"], select {
+    background-color: #F4F4F4; /* Light gray input background */
+    color: #000000;
+    border: 2px solid #B0B0B0; /* Subtle border */
+    padding: 8px;
+    font-size: 14px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* Container for Software Grid */
+#software-section {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border: 2px solid #D9D9D9;
+    margin-top: 30px;
+}
+
+/* Grid of Software Cards (Clean Layout) */
+#software-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.software-card {
+    background-color: #FFFFFF;
+    padding: 15px;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+.software-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle hover effect */
+}
+
+.software-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.software-card h3 {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.software-card p {
+    font-size: 12px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+/* License Badge (Minimalist) */
+.software-card .license {
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
     margin-top: 10px;
 }
-.footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #2c3e50;
-    color: white;
+
+/* License Colors */
+.software-card .license.mit { background-color: #4CAF50; } /* Green for MIT */
+.software-card .license.gpl-2-0 { background-color: #2196F3; } /* Blue for GPL 2.0 */
+.software-card .license.apache-2-0 { background-color: #FF5722; } /* Red for Apache */
+.software-card .license.default { background-color: #9E9E9E; } /* Gray for others */
+
+/* Links */
+a {
+    color: #0000EE; /* Classic blue link color */
+    text-decoration: none;
 }
-.footer a { color: #ecf0f1; }
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer (Optional) */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #D9D9D9;
+    color: #000000;
+    font-size: 12px;
+    margin-top: 30px;
+}
