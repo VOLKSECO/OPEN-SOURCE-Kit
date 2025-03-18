@@ -1,31 +1,31 @@
-/* Hack mode */
+/* Modern and clean style inspired by openbusiness.world */
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #0f0f0f; /* Dark background for hacker theme */
-    color: #00ff00; /* Bright green text color */
+    background-color: #f8f9fa; /* Light background */
+    color: #333; /* Dark grey text */
     line-height: 1.6;
 }
 
 header {
-    background-color: #1a1a1a; /* Dark header background */
-    color: #00ff00; /* Green text in the header */
+    background-color: #fff; /* White header background */
+    color: #007bff; /* Blue accent for header text */
     text-align: center;
     padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Strong shadow for tech feel */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 header h1 {
     margin: 0;
     font-size: 28px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 header p {
     margin: 5px 0 0;
     font-size: 16px;
-    opacity: 0.8;
+    color: #666; /* Softer grey for subtitle */
 }
 
 main {
@@ -35,11 +35,11 @@ main {
 }
 
 #filter-section {
-    background-color: #222; /* Dark background for filter section */
-    color: #00ff00; /* Green text color */
+    background-color: #fff; /* White background */
+    color: #333; /* Dark grey text */
     padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Very subtle shadow */
     margin-bottom: 30px;
 }
 
@@ -58,18 +58,18 @@ main {
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
-    color: #00ff00; /* Green for labels */
+    color: #007bff; /* Blue for labels */
 }
 
 .filter-group select, .filter-group input[type="checkbox"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #333; /* Dark border */
+    border: 1px solid #ddd; /* Light grey border */
     border-radius: 5px;
     font-size: 14px;
     box-sizing: border-box;
-    background-color: #333; /* Dark input background */
-    color: #00ff00; /* Green text in inputs */
+    background-color: #fff; /* White input background */
+    color: #333; /* Dark text in inputs */
 }
 
 .checkbox-group {
@@ -80,7 +80,7 @@ main {
 
 .checkbox-group label {
     margin: 0;
-    color: #00ff00; /* Green checkbox label */
+    color: #333; /* Dark grey checkbox label */
 }
 
 .checkbox-group input[type="checkbox"] {
@@ -88,17 +88,17 @@ main {
 }
 
 #software-section {
-    background-color: #222; /* Dark background for software section */
-    color: #00ff00; /* Green text color */
+    background-color: #fff; /* White background */
+    color: #333; /* Dark grey text */
     padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
 }
 
 #software-section h2 {
     margin: 0 0 20px;
     font-size: 22px;
-    color: #00ff00; /* Green for titles */
+    color: #007bff; /* Blue for titles */
 }
 
 #software-grid {
@@ -108,16 +108,16 @@ main {
 }
 
 .software-card {
-    border: 1px solid #444; /* Dark border for cards */
+    border: 1px solid #eee; /* Very light border */
     border-radius: 8px;
     padding: 20px;
-    background-color: #333; /* Dark background for cards */
+    background-color: #fff; /* White card background */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .software-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.5); /* Green glow on hover */
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2); /* Subtle blue shadow on hover */
 }
 
 .software-card img {
@@ -129,7 +129,7 @@ main {
 .software-card h3 {
     margin: 0 0 10px;
     font-size: 18px;
-    color: #00ff00; /* Green for software card titles */
+    color: #007bff; /* Blue for card titles */
 }
 
 .software-card .license {
@@ -142,28 +142,28 @@ main {
     color: #fff; /* White text for contrast */
 }
 
-/* License-specific background colors */
-.software-card .license.mit { background-color: #00b300; } /* MIT - Bright Green */
-.software-card .license.gpl-2-0 { background-color: #007bff; } /* GPL-2.0 - Blue */
-.software-card .license.gpl-3-0 { background-color: #0056b3; } /* GPL-3.0 - Darker Blue */
-.software-card .license.apache-2-0 { background-color: #ff8c00; } /* Apache-2.0 - Orange */
-.software-card .license.lgpl-2-1 { background-color: #800080; } /* LGPL-2.1 - Purple */
-.software-card .license.epl-2-0 { background-color: #ff4500; } /* EPL-2.0 - Red-Orange */
-.software-card .license.postgresql { background-color: #336791; } /* PostgreSQL - Steel Blue */
-.software-card .license.sspl-1-0 { background-color: #d81b60; } /* SSPL-1.0 - Pinkish Red */
-.software-card .license.bsd-3-clause { background-color: #ffc107; } /* BSD-3-Clause - Yellow */
-.software-card .license.mpl-2-0 { background-color: #17a2b8; } /* MPL-2.0 - Cyan */
-.software-card .license.agpl-3-0 { background-color: #fd7e14; } /* AGPL-3.0 - Bright Orange */
-.software-card .license.public-domain { background-color: #6c757d; } /* Public Domain - Gray */
-.software-card .license.odbl { background-color: #28a745; } /* ODbL - Forest Green */
+/* Adjusted license-specific background colors (pastel tones) */
+.software-card .license.mit { background-color: #66cc66; } /* MIT - Soft Green */
+.software-card .license.gpl-2-0 { background-color: #66b3ff; } /* GPL-2.0 - Light Blue */
+.software-card .license.gpl-3-0 { background-color: #4d94ff; } /* GPL-3.0 - Medium Blue */
+.software-card .license.apache-2-0 { background-color: #ffad33; } /* Apache-2.0 - Soft Orange */
+.software-card .license.lgpl-2-1 { background-color: #b366b3; } /* LGPL-2.1 - Light Purple */
+.software-card .license.epl-2-0 { background-color: #ff704d; } /* EPL-2.0 - Soft Red-Orange */
+.software-card .license.postgresql { background-color: #6699cc; } /* PostgreSQL - Light Steel Blue */
+.software-card .license.sspl-1-0 { background-color: #ff6699; } /* SSPL-1.0 - Soft Pink */
+.software-card .license.bsd-3-clause { background-color: #ffdb4d; } /* BSD-3-Clause - Light Yellow */
+.software-card .license.mpl-2-0 { background-color: #4dbbd5; } /* MPL-2.0 - Light Cyan */
+.software-card .license.agpl-3-0 { background-color: #ff9933; } /* AGPL-3.0 - Light Orange */
+.software-card .license.public-domain { background-color: #a6a6a6; } /* Public Domain - Light Gray */
+.software-card .license.odbl { background-color: #5cb85c; } /* ODbL - Soft Forest Green */
 
 /* Fallback for any unlisted licenses */
-.software-card .license.default { background-color: #808080; } /* Gray fallback */
+.software-card .license.default { background-color: #b3b3b3; } /* Light grey fallback */
 
 .software-card p {
     margin: 5px 0;
     font-size: 14px;
-    color: #ccc; /* Light grey text for paragraphs */
+    color: #666; /* Medium grey text for paragraphs */
 }
 
 .software-card .description {
@@ -172,21 +172,21 @@ main {
 }
 
 .software-card a {
-    color: #00ff00; /* Green links */
+    color: #007bff; /* Blue links */
     text-decoration: none;
 }
 
 .software-card a:hover {
     text-decoration: underline;
-    color: #ffcc00; /* Change color to yellow on hover */
+    color: #0056b3; /* Darker blue on hover */
 }
 
 .software-card .install {
-    background-color: #111; /* Dark background for install section */
+    background-color: #f1f3f5; /* Light grey background for install section */
     padding: 8px;
     border-radius: 5px;
     font-family: monospace;
     font-size: 13px;
     margin-top: 10px;
-    color: #00ff00; /* Green text for install code */
+    color: #333; /* Dark grey text for install code */
 }
