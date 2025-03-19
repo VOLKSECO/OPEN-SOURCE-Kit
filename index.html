@@ -1,44 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open Source Software Portal</title>
-    <link rel="stylesheet" href="./styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OPEN SOURCE KIT</title>
+  <link rel="stylesheet" href="styles/styles.css" id="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Open Source Software Portal</h1>
-        <p>Find the right open-source tools for your work</p>
-    </header>
-    <main>
-        <section id="filter-section">
-            <form id="software-filter">
-                <div class="filter-group">
-                    <label for="domain">Work Domain:</label>
-                    <select id="domain">
-                        <option value="">All Domains</option>
-                        <!-- Populated dynamically -->
-                    </select>
-                </div>
-                <div class="filter-group">
-                    <label for="task">Task:</label>
-                    <select id="task">
-                        <option value="">All Tasks</option>
-                        <!-- Populated dynamically -->
-                    </select>
-                </div>
-                <div class="filter-group checkbox-group">
-                    <label for="commercial">Suitable for Commercial Use:</label>
-                    <input type="checkbox" id="commercial">
-                </div>
-            </form>
-        </section>
-        <section id="software-section">
-            <h2>Software Options</h2>
-            <div id="software-grid"></div>
-        </section>
-    </main>
-    <script src="./scripts/app.js"></script>
+  <header>
+    <div class="style-buttons">
+      <button class="style-btn" data-style="styles/styles.css" title="Style clair"></button>
+      <button class="style-btn" data-style="styles/styles_1.css" title="Style Sombre"></button>
+    </div>
+    <h1>OPEN SOURCE KIT</h1>
+    <p>Logiciels open source pour vos formations et tâches</p>
+  </header>
+
+  <main>
+    <section class="selectors">
+        <div>
+            <label for="formation-selector"></label>
+            <select id="formation-selector">
+              <option value="">-- Toutes les formations --</option>
+            </select>
+          </div>
+      <div>
+        <label for="task-selector"></label>
+        <select id="task-selector">
+          <option value="">-- Toutes les tâches --</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="software-list" class="software-grid">
+      <!-- Les vCards seront insérées ici -->
+    </section>
+  </main>
+
+  <script type="module" src="scripts/filter.js"></script>
 </body>
 </html>

@@ -1,0 +1,243 @@
+/* Modern and clean style inspired by openbusiness.world - Mode Sombre */
+body {
+  font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #181818; /* Fond sombre */
+  color: #f8f9fa; /* Texte clair pour contraste */
+  line-height: 1.6;
+}
+
+header {
+  background-color: #2c2c2c; /* Fond sombre pour le header */
+  color: #007bff; /* Accent bleu vif pour le texte du header */
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre plus marquée */
+  position: relative;
+}
+
+header .style-buttons {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  gap: 5px;
+}
+
+header .style-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #555; /* Bordure sombre */
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #f8f9fa; /* Texte clair par défaut */
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Couleurs et ombres spécifiques pour chaque style */
+header .style-btn:nth-child(1) {
+  background-color: #ffffff; /* Fond sombre pour défaut (sombre) */
+  color: #f8f9fa; /* Texte clair */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+header .style-btn:nth-child(2) {
+  background-color: #333; /* Fond gris foncé pour style_1 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Ombre plus marquée */
+}
+
+header .style-btn:nth-child(3) {
+  background-color: #003366; /* Fond bleu très foncé pour style_2 */
+  color: #00bfff; /* Texte bleu clair */
+  box-shadow: 0 2px 4px rgba(0, 191, 255, 0.2); /* Ombre bleue */
+}
+
+header .style-btn:nth-child(4) {
+  background-color: #444; /* Fond gris clair pour style_3 */
+  color: #bbb; /* Texte gris clair */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Ombre légère */
+}
+
+header .style-btn:hover {
+  border-color: #00bfff; /* Bleu clair au survol */
+  transform: scale(1.1);
+}
+
+header .style-btn.active {
+  border-color: #00bfff; /* Indicateur de style actif */
+  box-shadow: 0 0 5px rgba(0, 191, 255, 0.5);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+header p {
+  margin: 5px 0 0;
+  font-size: 16px;
+  color: #bbb; /* Gris clair pour le sous-titre */
+}
+
+main {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.selectors {
+  background-color: #2c2c2c; /* Fond sombre */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.selectors div {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.selectors label {
+  font-weight: 600;
+  color: #00bfff; /* Texte bleu clair pour les labels */
+  margin-bottom: 5px;
+}
+
+.selectors select {
+  width: 100%;
+  padding: 15px 20px;
+  border: 2px solid #555; /* Bordure sombre */
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #00bfff; /* Fond bleu clair */
+  color: #181818; /* Texte sombre */
+  font-weight: 600;
+  text-align: center;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.selectors select:hover {
+  background-color: #007acc; /* Bleu foncé au survol */
+  border-color: #00bfff;
+  box-shadow: 0 4px 8px rgba(0, 191, 255, 0.4);
+}
+
+.selectors select:focus {
+  outline: none;
+  background-color: #003366; /* Bleu très foncé au focus */
+  border-color: #00224d;
+  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.5);
+}
+
+.software-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  background-color: #2c2c2c; /* Fond sombre */
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.vcard {
+  border: 1px solid #555; /* Bordure sombre */
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #333; /* Fond gris très foncé */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.vcard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 191, 255, 0.2); /* Ombre bleue au survol */
+}
+
+.software-logo {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.vcard h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  color: #00bfff; /* Bleu clair pour les titres */
+}
+
+.vcard p {
+  margin: 5px 0;
+  font-size: 12px;
+  color: #bbb; /* Gris clair pour le texte */
+}
+
+.vcard .license {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #f8f9fa;
+}
+
+/* Couleurs spécifiques pour les licences (tons pastel) */
+.vcard .license.mit { background-color: #66cc66; }
+.vcard .license.gplv2 { background-color: #66b3ff; }
+.vcard .license.gplv3 { background-color: #4d94ff; }
+
+/* Fallback pour licences non listées */
+.vcard .license { background-color: #888; }
+
+.vcard a {
+  color: #00bfff; /* Liens bleus clairs */
+  text-decoration: none;
+}
+
+.vcard a:hover {
+  text-decoration: underline;
+  color: #007acc; /* Bleu plus foncé au survol */
+}
+
+.vcard code {
+  background-color: #444; /* Fond gris foncé pour les blocs de code */
+  padding: 4px 6px;
+  border-radius: 5px;
+  font-family: monospace;
+  font-size: 11px;
+  color: #f8f9fa; /* Texte clair */
+  display: block;
+  margin-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .software-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .software-grid {
+    grid-template-columns: 1fr;
+  }
+}
